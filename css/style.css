@@ -1,0 +1,85 @@
+#wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* box slide */
+
+.box-slide{
+    width: 1000px;
+    height: 500px;
+    background-color: black;
+    position: relative;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slide img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 100% 32%;
+}
+
+.slide img.avengers{
+    object-position: 0% 48%;
+}
+
+.slide.active{
+    display: block;
+}
+
+button{
+    color: white;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 50%;
+    font-size: 30px;
+}
+
+button.up{
+    top: 0;
+}
+
+button.down{
+    bottom: 0;
+}
+
+/* preview */
+
+.box-preview{
+    width: 200px;
+    height: 500px;
+    background-color: black;
+}
+
+.preview{
+    width: 100%;
+    height: 20%;
+    background-color: green;
+    opacity: 0.2;
+}
+
+.preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 30%;
+}
+
+.preview img.avengers{
+    object-position: 0% 48%;
+}
+
+.preview.selected{
+    opacity: 1;
+    border: 2px solid lightgray;
+}
