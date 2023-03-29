@@ -19,7 +19,11 @@
                 <button class="up"><i class="fa-solid fa-circle-up"></i></button>
                 <button class="down"><i class="fa-solid fa-circle-down"></i></button>
             </div>
-            <div class="box-preview"></div>
+            <div class="box-preview">
+                <div :class="slide.classPreview" v-for="(slide, index) in images" :key="index">
+                    <img :src="slide.image" :alt="slide.title">
+                </div>
+            </div>
         </div>
     </div>
     
