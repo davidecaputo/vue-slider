@@ -36,7 +36,24 @@ createApp({
                     classPreview: 'preview',
                     classImage: 'avengers'
                 }
-            ]
+            ],
+            index : 0,
         }
-    }
+    },
+    methods: {
+        up() {
+            console.log(this.index);
+            console.log(this.images.length);
+            if(this.index === 0){
+                console.log('ciao');
+                this.index = this.images.length - 1;
+            } else {
+                this.index--;
+            }
+        },
+        down(){
+            this.index++;
+            console.log(this.index);
+        },
+      }
 }).mount('#app');
