@@ -52,8 +52,13 @@ createApp({
             }
         },
         down(){
-            this.index++;
             console.log(this.index);
+            if(this.index === this.images.length - 1){
+                console.log('ciao');
+                this.index = 0;
+            } else {
+                this.index++;
+            }
         },
       }
 }).mount('#app');
