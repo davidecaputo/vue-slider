@@ -13,14 +13,14 @@
     <div id="app">
         <div id="wrapper">
             <div class="box-slide" v-on:mouseover="autoplay" v-on:mouseleave="stopautoplay">
-                <div :class="images[index].class" class="active">
-                    <img :src="images[index].image" :alt="images[index].image" :class="images[index].classImage">
+                <div :class="images[slideIndex].class" class="active">
+                    <img :src="images[slideIndex].image" :alt="images[slideIndex].image" :class="images[slideIndex].classImage">
                 </div>
                 <button class="up" @click="up"><i class="fa-solid fa-circle-up"></i></button>
                 <button class="down" @click="down"><i class="fa-solid fa-circle-down"></i></button>
             </div>
             <div class="box-preview">
-                <div :class="inde === index ? 'preview selected' : 'preview' " v-for="(slide, inde) in images" :key="index">
+                <div :class="index === slideIndex ? 'preview selected' : 'preview' " v-for="(slide, index) in images" :key="slideIndex">
                     <img :src="slide.image" :alt="slide.title" :class="slide.classImage">
                 </div>
             </div>

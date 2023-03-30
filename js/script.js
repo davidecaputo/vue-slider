@@ -38,26 +38,26 @@ createApp({
                 }
             ],
             autoPlay: null,
-            index : 0,
+            slideIndex : 0,
         }
     },
     methods: {
         up() {
-            console.log(this.index);
+            console.log(this.slideIndex);
             console.log(this.images.length);
-            if(this.index === 0){
-                this.index = this.images.length - 1;
+            if(this.slideIndex === 0){
+                this.slideIndex = this.images.length - 1;
             } else {
-                this.index--;
+                this.slideIndex--;
             }
         },
         down(){
-            console.log(this.index);
-            if(this.index === this.images.length - 1){
+            console.log(this.slideIndex);
+            if(this.slideIndex === this.images.length - 1){
                 console.log('ciao');
-                this.index = 0;
+                this.slideIndex = 0;
             } else {
-                this.index++;
+                this.slideIndex++;
             }
         },
         autoplay(){
