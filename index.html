@@ -12,7 +12,7 @@
 <body>
     <div id="app">
         <div id="wrapper">
-            <div class="box-slide">
+            <div class="box-slide" v-on:mouseover="autoplay" v-on:mouseleave="stopautoplay">
                 <div :class="images[index].class" class="active">
                     <img :src="images[index].image" :alt="images[index].image" :class="images[index].classImage">
                 </div>
@@ -20,7 +20,7 @@
                 <button class="down" @click="down"><i class="fa-solid fa-circle-down"></i></button>
             </div>
             <div class="box-preview">
-                <div :class="slide.classPreview" v-for="(slide, index) in images" :key="index">
+                <div :class="inde === index ? 'preview selected' : 'preview' " v-for="(slide, inde) in images" :key="index">
                     <img :src="slide.image" :alt="slide.title" :class="slide.classImage">
                 </div>
             </div>
