@@ -12,7 +12,7 @@
 <body>
     <div id="app">
         <div id="wrapper">
-            <div class="box-slide" v-on:mouseover="autoplay" v-on:mouseleave="stopautoplay">
+            <div class="box-slide" v-on:mouseover="stopautoplay" v-on:mouseleave="autoplay">
                 <div :class="images[slideIndex].class" class="active">
                     <img :src="images[slideIndex].image" :alt="images[slideIndex].image" :class="images[slideIndex].classImage">
                 </div>

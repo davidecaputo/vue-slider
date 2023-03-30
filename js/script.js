@@ -41,6 +41,9 @@ createApp({
             slideIndex : 0,
         }
     },
+    created(){
+        this.autoplay();
+    },
     methods: {
         up() {
             console.log(this.slideIndex);
